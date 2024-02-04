@@ -1,0 +1,17 @@
+cc_library(
+    name = "openvdb",
+    srcs = glob(
+        ["**/*.cc"],
+        exclude = [
+            "openvdb/python/**",
+            "openvdb/unittest/**",
+        ],
+    ),
+    hdrs = glob(["**/*.h"]),
+    includes = ["."],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@c-blosc2",
+        "@onetbb//:tbb",
+    ],
+)

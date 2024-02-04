@@ -1,0 +1,8 @@
+cc_test(
+    name = "TestCoord",
+    srcs = ["TestCoord.cc"],
+    deps = [
+        "//openvdb",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
